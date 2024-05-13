@@ -1,6 +1,7 @@
 FROM python:3
+WORKDIR /usr/src
 RUN pip install numpy
-RUN pip intall pandas
+RUN pip install pandas
 RUN pip install scikit-learn
-COPY Class_perceptron.py .
+COPY ./src .
 cmd ["python","./Class_perceptron.py"]
